@@ -7,7 +7,7 @@ def phi(x):
 	return math.exp(x)/(4 * math.sqrt(math.exp(x)))
 
 #Intervalo Inicial
-x=-0.4
+x= 4.4
 
 #Contagem de Iterações
 k= 0
@@ -17,10 +17,11 @@ erro= 0.0001
 
 print("A solução inicial é:", x,"\n")
 while abs (f(x))>erro:
-	x= phi(x)	
 	k=k+1
-	print("A solução atual é",x, "\nA interação atual é:", k,"\n")
+	x= phi(x)
+	x_raiz=x
+	print("A solução atual é",x_raiz, "\nA interação atual é:", k,"\n")
 	if k>=30:
 		break
 
-print("A solução final é:",x,"\nTotal de interações foi:", k)
+print("A solução final é:",x_raiz,"\nTotal de interações foi:", k)
