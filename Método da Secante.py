@@ -1,16 +1,20 @@
+#Método da Secante
 import math
-
 def f(x):
 	return math.exp(x) - (4 * math.pow(x, 2))
 
+#Intervalo Inicial
 x_0= 4
 x_1= 4.5
 
 x_2= (x_0+x_1)/2
 
+#Contagem de Iterações
 k= 0
 
+#Precisão
 erro= 0.0001
+
 print("Solução inicial é:", x_2,"\n")
 
 while abs (f(x_2))>erro:

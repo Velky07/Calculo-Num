@@ -1,16 +1,20 @@
+#Método do Ponto Falso
 import math
-
 def f(x):
 	return math.exp(x) - (4 * math.pow(x, 2))
 
+#Intervalo inicial
 a= 4
 b= 4.5
 
 M_pond= (a+b)/2
 
+#Contagem de Iterações
 k= 0
 
+#Precisão
 erro= 0.0001
+
 print("A interação inicial é:", M_pond,"\n")
 
 while abs (f(M_pond))>erro:
