@@ -10,7 +10,7 @@ def VetorB(A):
   return lista
 
 
-def elimGauss(A, b): 
+def eGauss(A, b): 
   numTm = len(b) 
   for k in range(0, numTm-1):
       for linhas in range(k+1, numTm):
@@ -21,7 +21,7 @@ def elimGauss(A, b):
   return A, b
 
 
-def subsReversa(A, b): 
+def subReversa(A, b): 
    numTm = len(b)
    x = numTm*[0]
    x[numTm-1] = b[numTm-1]/A[numTm-1][numTm-1]
@@ -33,18 +33,18 @@ def subsReversa(A, b):
    return x
 
 
-def matrizHil(a, z): 
+def mHills(a, z): 
     if a == z:
       return [[1 / (L + C + 1) for C in range(z)] for L in range(a)]
     else:
-      print("Essa forma de matriz não é valida")
+      print("matriz não valida")
 
 
-a = int(input("insira o número de linhas da sua matriz: "))
-z = int(input("insira o número de colunas da sua matriz: "))
-resp = print("Sua matriz é do tamanho ",a ,"x",z)
-A = matrizHil(a, z)
+numLinhas = int(input("insira o número de linhas da sua matriz: "))
+numColunas = int(input("insira o número de colunas da sua matriz: "))
+print("Sua matriz é do tamanho ",numLinhas ,"x",numColunas)
+A = mHills(numLinhas, numColunas)
 b = VetorB(A)
 
-print("-------------------------- GAUSS ---------------------------------------\nSua matriz após o método de eliminação de gauss é :", elimGauss(A, b))
-print("------------------------- SUBSREVERSA ----------------------------------\nSua matriz após o método da substituição reversa é :",subsReversa(A, b),"\n------------------------------------------------------------------------")
+print("-------------------------- GAUSS ---------------------------------------\nSua matriz após o método de eliminação de gauss é :", eGauss(A, b))
+print("------------------------- SUBSREVERSA ----------------------------------\nSua matriz após o método da substituição reversa é :",subReversa(A, b),"\n------------------------------------------------------------------------")
