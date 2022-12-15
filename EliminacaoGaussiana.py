@@ -1,5 +1,3 @@
-import numpy as np
-
 def VetorB(A): 
   lista = []
   for linhas in range(len(A)): 
@@ -43,8 +41,10 @@ def mHills(a, z):
 numLinhas = int(input("insira o número de linhas da sua matriz: "))
 numColunas = int(input("insira o número de colunas da sua matriz: "))
 print("Sua matriz é do tamanho ",numLinhas ,"x",numColunas)
-A = mHills(numLinhas, numColunas)
-b = VetorB(A)
+a = mHills(numLinhas, numColunas)
+b = VetorB(a)
+resultGauss = eGauss(a,b)
+resultReserva = subReversa(a,b)
 
-print("-------------------------- GAUSS ---------------------------------------\nSua matriz após o método de eliminação de gauss é :", eGauss(A, b))
-print("------------------------- SUBSREVERSA ----------------------------------\nSua matriz após o método da substituição reversa é :",subReversa(A, b),"\n------------------------------------------------------------------------")
+print("-------------------------- GAUSS ---------------------------------------\nSua matriz após o método de eliminação de gauss é :", resultGauss)
+print("------------------------- SUBSREVERSA ----------------------------------\nSua matriz após o método da substituição reversa é :",resultReserva,"\n------------------------------------------------------------------------")
