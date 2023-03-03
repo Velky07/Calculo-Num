@@ -58,9 +58,11 @@ S1 = solucao(M1_vt, x_t)
 M2_t, y_t = elimGauss(M2, z)
 S2 = solucao(M2_t, y_t)
 
+#Questão 1
 print("com um polinômio de grau 2 temos:", p(32.5, S1)) 
 print("com um polinômio de grau 6 temos:", p(32.5, S2))
 
 x_2=[[0.99828, 40], [0.99849, 45]]
 
+#Questão 2
 print("com um interpolação linear temos que a temperatura, em graus ceulsius, da água é de:",round(interpolaçãoLin(x_2, 0.99837),2),"°")#interpolação Linear
